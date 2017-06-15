@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Template } from 'meteor/templating';
+// To use the Blaze UI component from the accounts-ui package, we need to wrap it in a React component.
 import { Blaze } from 'meteor/blaze';
-
 export default class AccountsUIWrapper extends Component {
   componentDidMount() {
     // Use Meteor Blaze to render login buttons
