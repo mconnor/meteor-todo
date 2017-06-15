@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Tasks } from '../api/tasks.js';
 
 // Task component - represents a single todo item
@@ -29,8 +30,11 @@ export default class Task extends Component {
           checked={this.props.task.checked}
           onClick={this.toggleChecked.bind(this)}
         />
+				<span className="text">
+          <strong>{this.props.task.username}</strong>: {this.props.task.text}
+        </span>
 
-        <span className="text">{this.props.task.text}</span>
+
       </li>
     );
   }
